@@ -1,6 +1,5 @@
 1..1000 | foreach-object {
-    set-gpiopin 1 0; 
-    set-gpiopin 0 1; 
-    start-sleep -milliseconds 200; 
-    set-gpiopin 1 1;
-    set-gpiopin 1 0}
+    for ($i=0; $i -lt 2;$i++)
+{ Set-gpiopin $i 0
+start-sleep 1
+set-gpiopin $i 1}}
